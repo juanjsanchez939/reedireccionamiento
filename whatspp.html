@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAYORISTA</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e6f9f0, #ccf2e0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 5px solid #cceee0;
+      border-top: 5px solid #16a34a;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    h1 {
+      color: #065f46;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #047857;
+    }
+  </style>
+
+  <!-- PIXEL FACEBOOK -->
+  <script>
+    !(function(f,b,e,v,n,t,s){
+      if(f.fbq)return;
+      n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];
+      t=b.createElement(e);t.async=!0;
+      t.src=v;
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    })(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '976734471336551');
+    fbq('track', 'PageView');
+  </script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="loader"></div>
+    <h1>Conectando con WhatsApp</h1>
+    <p>Te redirigiremos en un momento</p>
+  </div>
+
+  <script>
+    // TU NUMERO FORMATO INTERNACIONAL (ARG)
+    const numero = "541123947693";
+
+    // MENSAJE AUTOMATICO
+    const mensaje = "Hola quiero un usuario!📲";
+
+    // LINK FINAL
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+    // REDIRECCION (2 segundos)
+    setTimeout(() => {
+      window.location.href = url;
+    }, 2000);
+  </script>
+
+</body>
+</html>
